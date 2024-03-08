@@ -16,7 +16,7 @@ public class SendMailMessage {
     public void sendMailToClient(String toEmail, String body, String subject) throws jakarta.mail.MessagingException {
         jakarta.mail.internet.MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
-        mimeMessageHelper.setFrom("ayoubbahroun203@gmail.com");
+        mimeMessageHelper.setFrom("faresramchani@gmail.com");
         mimeMessageHelper.setTo(toEmail);
         mimeMessageHelper.setText(body);
         mimeMessageHelper.setSubject(subject);

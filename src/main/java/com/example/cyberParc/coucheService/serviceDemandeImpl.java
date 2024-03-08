@@ -175,7 +175,7 @@ private Long id;
         demande demande=demanderepository.findById(id).get();
         demandeur demandeur=demandeurrepository.findByDemande_Id(id);
         demande.setStatue(EnumDemande.Aceepter);
-        sendMailMessage.sendMailToClient(demandeur.getMail(),"votre demande a ete accepter"+demandeur.getNom()+" "+demandeur.getPrenom(),"Confirmation de demande");
+        sendMailMessage.sendMailToClient(demandeur.getMail(),"votre demande a été accepter"+demandeur.getNom()+" "+demandeur.getPrenom(),"Confirmation de demande");
         demanderepository.save(demande);
     }
     @Override
